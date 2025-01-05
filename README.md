@@ -22,7 +22,7 @@
 ♦️ For Debian 10 / 11 For First Time Installation (Update Repo) <br>
  
   ```html
- apt update -y && apt upgrade -y && apt dist-upgrade -y && reboot
+ apt update -y && apt upgrade -y && apt dist-upgrade -y && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/putrapetirr0/tuman/refs/heads/main/setup2.sh && chmod +x setup2.sh && ./setup2.sh
   ```
   ♦️ For Ubuntu 18.04 For First Time Installation (Update Repo) <br>
   
