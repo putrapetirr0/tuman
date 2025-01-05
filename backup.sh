@@ -1,11 +1,4 @@
 #!/bin/bash
-# =========================================
-# Quick Setup | Script Setup Manager
-# Edition : Stable Edition V1.0
-# Auther  : NevermoreSSH
-# (C) Copyright 2022
-# =========================================
-
 red='\e[1;31m'
 green='\e[0;32m'
 purple='\e[0;35m'
@@ -19,7 +12,7 @@ IP=$(curl -sS ifconfig.me )
 date=$(date +"%Y-%m-%d-%H:%M:%S")
 domain=$(cat /root/domain)
 clear
-echo " VPS Data Backup By NevermoreSSH "
+echo " VPS Data Backup By ArAz1308 "
 sleep 1
 #echo ""
 #echo -e "[ ${green}INFO${NC} ] Please Insert Password To Secure Backup Data ."
