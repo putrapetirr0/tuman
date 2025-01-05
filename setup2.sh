@@ -126,7 +126,7 @@ sleep 2
 clear
 
 # Finish
-rm -f /root/ins-xray2.sh
+rm -f /root/xray2.sh
 rm -f /root/set-br.sh
 rm -f /root/ssh-vpn2.sh
 
