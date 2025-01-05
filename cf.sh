@@ -5,9 +5,9 @@ clear
 apt install jq curl -y >/dev/null 2>&1
 DOMAIN=nevermoressh.me
 sub=$(</dev/urandom tr -dc a-x1-9 | head -c6 | tr -d '\r' | tr -d '\r\n')
-SUB_DOMAIN=${sub}.nevermoressh.me
-CF_ID=elliez667@gmail.com
-CF_KEY=1d158d0efc4eef787222cefff0b6d20981462
+SUB_DOMAIN=${sub}.araz1308.my.id
+CF_ID=putrapetirr0@gmail.com
+CF_KEY=4c6a99e072c0b60b815ed3d22dbbfd8bafd64
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
 echo "Updating DNS for ${SUB_DOMAIN}..."
