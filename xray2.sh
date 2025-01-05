@@ -1,16 +1,10 @@
 #!/bin/bash
-# =========================================
-# Quick Setup | Script Setup Manager
-# Edition : Stable Edition V1.0
-# Auther  : NevermoreSSH
-# (C) Copyright 2022
-# =========================================
 red='\e[1;31m'
 green='\e[0;32m'
 purple='\e[0;35m'
 orange='\e[0;33m'
 NC='\e[0m'
-export Server_URL="raw.githubusercontent.com/NevermoreSSH/yourpath/main"
+export Server_URL="raw.githubusercontent.com/putrapetirr0/tuman/refs/heads/main"
 
 clear
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
@@ -87,7 +81,7 @@ mkdir -p /usr/local/etc/xray
 #chmod +x /usr/local/bin/xray
 
 #Download XRAY Core Dharak
-wget -O /usr/local/bin/xray "https://raw.githubusercontent.com/NevermoreSSH/yourpath/main/xray.linux.64bit"
+wget -O /usr/local/bin/xray "https://raw.githubusercontent.com/putrapetirr0/tuman/refs/heads/main/xray.linux.64bit"
 chmod +x /usr/local/bin/xray
 
 # generate certificates
@@ -1221,4 +1215,7 @@ wget -O trial-xtr "https://${Server_URL}/trial-xtr.sh" && chmod +x trial-xtr
 # // OTHER FILES
 echo -e "[ ${green}INFO${NC} ] Downloading Others Files"
 sleep 1
+wget -O addbot "https://${Server_URL}/addbot.sh" && chmod +x addbot
+wget -O autobackup "https://${Server_URL}/autobackup.sh" && chmod +x autobackup
+
 rm -r xray2.sh
