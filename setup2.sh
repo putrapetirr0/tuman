@@ -126,9 +126,9 @@ sleep 2
 clear
 
 # Finish
-rm -f /root/ins-xray.sh
+rm -f /root/ins-xray2.sh
 rm -f /root/set-br.sh
-rm -f /root/ssh-vpn.sh
+rm -f /root/ssh-vpn2.sh
 
 # Version
 echo "1.0" > /home/ver
