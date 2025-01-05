@@ -1,11 +1,5 @@
 #!/bin/bash
-# =========================================
-# Quick Setup | Script Setup Manager
-# Edition : Stable Edition V1.0
-# Auther  : NevermoreSSH
-# (C) Copyright 2022
-# =========================================
-export Server_URL="raw.githubusercontent.com/NevermoreSSH/yourpath/main"
+export Server_URL="raw.githubusercontent.com/putrapetirr0/tuman/refs/heads/main"
 
 clear
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
@@ -47,9 +41,13 @@ cd /usr/bin
 wget -O backup "https://${Server_URL}/backup.sh"
 wget -O restore "https://${Server_URL}/restore.sh"
 wget -O cleaner "https://${Server_URL}/logcleaner.sh"
+wget -O addbot "https://${Server_URL}/addbot.sh"
+wget -O autobackup "https://${Server_URL}/autobackup.sh"
 chmod +x /usr/bin/backup
 chmod +x /usr/bin/restore
 chmod +x /usr/bin/cleaner
+chmod +x /usr/bin/addbot
+chmod +x /usr/bin/autobackup
 cd
 if [ ! -f "/etc/cron.d/cleaner" ]; then
 cat> /etc/cron.d/cleaner << END
