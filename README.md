@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <h2 align="center">
- XRAY Multiport Websocket Free By NevermoreSSH 
 <br> Support CustomPath / worryfree
   
 <h2 align="center"> ♦️Supported Linux Distribution♦️</h2>
@@ -33,12 +32,12 @@
 ♦️ Installation ( Xray-core Custom ) Link<br>
 
   ```html
-sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/NevermoreSSH/yourpath/main/setup.sh && chmod +x setup.sh && ./setup.sh
+sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/putrapetirr0/tuman/refs/heads/main/setup.sh && chmod +x setup.sh && ./setup.sh
   ```
 ♦️ Installation ( Xray-core Custom + IPV6 on ) Link<br>
 
   ```html
-apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/NevermoreSSH/yourpath/main/setup2.sh && chmod +x setup2.sh && ./setup2.sh
+apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/putrapetirr0/tuman/refs/heads/main/setup2.sh && chmod +x setup2.sh && ./setup2.sh
   ```
 <b>
 
