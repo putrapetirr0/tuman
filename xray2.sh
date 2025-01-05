@@ -1215,7 +1215,4 @@ wget -O trial-xtr "https://${Server_URL}/trial-xtr.sh" && chmod +x trial-xtr
 # // OTHER FILES
 echo -e "[ ${green}INFO${NC} ] Downloading Others Files"
 sleep 1
-wget -O addbot "https://${Server_URL}/addbot.sh" && chmod +x addbot
-wget -O autobackup "https://${Server_URL}/autobackup.sh" && chmod +x autobackup
-
 rm -r xray2.sh
