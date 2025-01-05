@@ -32,7 +32,7 @@ echo -e "[ ${green}INFO${NC} ] Starting renew cert... "
 rm -r /root/.acme.sh
 sleep 1
 mkdir /root/.acme.sh
-curl https://raw.githubusercontent.com/NevermoreSSH/yourpath/main/acme.sh -o /root/.acme.sh/acme.sh
+curl https://raw.githubusercontent.com/putrapetirr0/tuman/refs/heads/main/acme.sh -o /root/.acme.sh/acme.sh
 chmod +x /root/.acme.sh/acme.sh
 /root/.acme.sh/acme.sh --upgrade --auto-upgrade
 /root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
