@@ -46,7 +46,7 @@ cat << EOF >> /etc/crontab
 0 */5 * * * root /usr/bin/backup
 # END_Backup
 EOF
-service cron restart
+service cron restart > /dev/null 2>&1
 sleep 1
 echo " Please Wait"
 clear
@@ -61,7 +61,7 @@ sed -i "/^# BEGIN_Backup/,/^# END_Backup/d" /etc/crontab
 CHAT_ID=$(cat /home/chat)
 sed -i "/^$CHAT_ID/d" /home/chat
 sed -i "/^# BEGIN_Backup/,/^# END_Backup/d" /etc/crontab
-service cron restart
+service cron restart > /dev/null 2>&1
 sleep 1
 echo " Please Wait"
 clear
