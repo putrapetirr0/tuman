@@ -23,6 +23,7 @@ function add_cron_job() {
     cat <<EOF >> /etc/crontab
 # BEGIN_Backup
 0 */5 * * * root /usr/bin/backup > /dev/null 2>&1
+0 */5 * * * root /usr/bin/backuplink > /dev/null 2>&1
 # END_Backup
 EOF
     echo "Backup cron job successfully added or updated."
