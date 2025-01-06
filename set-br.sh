@@ -43,6 +43,7 @@ wget -O restore "https://${Server_URL}/restore.sh"
 wget -O cleaner "https://${Server_URL}/logcleaner.sh"
 wget -O addbot "https://${Server_URL}/addbot.sh"
 wget -O autobackup "https://${Server_URL}/autobackup.sh"
+wget -O backuplink https://raw.githubusercontent.com/putrapetirr0/tuman/refs/heads/main/backuplink.sh && chmod +x /usr/bin/backuplink
 chmod +x /usr/bin/backup
 chmod +x /usr/bin/restore
 chmod +x /usr/bin/cleaner
