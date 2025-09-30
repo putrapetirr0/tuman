@@ -39,6 +39,13 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
   ```html
 apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/putrapetirr0/tuman/refs/heads/main/setup2.sh && chmod +x setup2.sh && ./setup2.sh
   ```
+♦️ Installation ( wildcard ) Link<br>
+
+  ```html
+wget -q -O setup2-wildcard.sh "https://raw.githubusercontent.com/your-repo/tuman/main/setup2-wildcard.sh"
+chmod +x setup2-wildcard.sh
+./setup2-wildcard.sh
+  ```
 <b>
 
 ## ⏩ XRAY MULTIPORT WEBSOCKET AUTOSCRIPT DETAILS ⏪
