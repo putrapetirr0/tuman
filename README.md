@@ -42,7 +42,7 @@ apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://ra
 ♦️ Installation ( wildcard ) Link<br>
 
   ```html
-wget -q -O setup2-wildcard.sh "https://raw.githubusercontent.com/your-repo/tuman/main/setup2-wildcard.sh"
+wget -q -O setup2-wildcard.sh "https://raw.githubusercontent.com/putrapetirr0/tuman/refs/heads/main/setup2-wildcard.sh"
 chmod +x setup2-wildcard.sh
 ./setup2-wildcard.sh
   ```
