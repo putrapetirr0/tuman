@@ -19,12 +19,6 @@ echo start
 sleep 1
 source /var/lib/premium-script/ipvps.conf
 domain=$(cat /usr/local/etc/xray/domain)
-WILDCARD_DOMAIN=$(cat /root/domain)
-if [[ $WILDCARD_DOMAIN == *"*"* ]]; then
-    # Extract base domain from wildcard
-    BASE_DOMAIN=$(echo $WILDCARD_DOMAIN | sed 's/\*\.//')
-    domain=$BASE_DOMAIN
-fi
 systemctl stop nginx
 systemctl stop xray.service
 systemctl stop xray@none.service
@@ -35,15 +29,21 @@ systemctl stop xray@trnone.service
 systemctl stop xray@xtrojan.service
 systemctl stop xray@trojan.service
 echo -e "[ ${green}INFO${NC} ] Starting renew cert... "
-rm -r /root/.acme.sh
-sleep 1
-mkdir /root/.acme.sh
-curl https://raw.githubusercontent.com/putrapetirr0/tuman/refs/heads/main/acme.sh -o /root/.acme.sh/acme.sh
-chmod +x /root/.acme.sh/acme.sh
-/root/.acme.sh/acme.sh --upgrade --auto-upgrade
-/root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
-/root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
-~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /usr/local/etc/xray/xray.crt --keypath /usr/local/etc/xray/xray.key --ecc
+if [ -f "/root/.cloudflare/credentials" ]; then
+    echo -e "[ ${green}INFO${NC} ] Renewing wildcard certificate..."
+    /root/renew-wildcard.sh
+else
+    # Existing renew code
+    rm -r /root/.acme.sh
+    sleep 1
+    mkdir /root/.acme.sh
+    curl https://raw.githubusercontent.com/putrapetirr0/tuman/refs/heads/main/acme.sh -o /root/.acme.sh/acme.sh
+    chmod +x /root/.acme.sh/acme.sh
+    /root/.acme.sh/acme.sh --upgrade --auto-upgrade
+    /root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
+    /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
+    ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /usr/local/etc/xray/xray.crt --keypath /usr/local/etc/xray/xray.key --ecc
+fi
 echo -e "[ ${green}INFO${NC} ] Restart All Service" 
 sleep 1
 systemctl restart nginx
