@@ -111,31 +111,31 @@ echo "$host" >> /root/domain
 #Install SSH-VPN
 echo -e "\e[0;32mINSTALLING SSH-VPN...\e[0m"
 sleep 1
-wget https://${Server_URL}/ssh-vpn2.sh && chmod +x ssh-vpn2.sh && ./ssh-vpn2.sh
+wget https://${Server_URL}/ssh-vpn2-w.sh && chmod +x ssh-vpn2-w.sh && ./ssh-vpn2-w.sh
 sleep 3
 clear
 echo -e "\e[0;32mINSTALLING XRAY CORE...\e[0m"
 sleep 3
-wget -q -O /root/xray2.sh "https://${Server_URL}/xray2.sh"
-chmod +x /root/xray2.sh
-./xray2.sh
+wget -q -O /root/xray2-w.sh "https://${Server_URL}/xray2-w.sh"
+chmod +x /root/xray2-w.sh
+./xray2-w.sh
 echo -e "${GREEN}Done!${NC}"
 sleep 2
 clear
 #Install SET-BR
 echo -e "\e[0;32mINSTALLING SET-BR...\e[0m"
 sleep 1
-wget -q -O /root/set-br.sh "https://${Server_URL}/set-br.sh"
-chmod +x /root/set-br.sh
-./set-br.sh
+wget -q -O /root/set-br.sh "https://${Server_URL}/set-br-w.sh"
+chmod +x /root/set-br-w.sh
+./set-br-w.sh
 echo -e "${GREEN}Done!${NC}"
 sleep 2
 clear
 
 # Finish
-rm -f /root/xray2.sh
-rm -f /root/set-br.sh
-rm -f /root/ssh-vpn2.sh
+rm -f /root/xray2-w.sh
+rm -f /root/set-br-w.sh
+rm -f /root/ssh-vpn2-w.sh
 
 # Version
 echo "1.0" > /home/ver
