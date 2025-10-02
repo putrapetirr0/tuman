@@ -72,26 +72,13 @@ fi
 mkdir /var/lib/premium-script;
 mkdir /var/lib/crot-script;
 clear
+echo -e "${red}    ♦️${NC} ${green} CUSTOM SETUP DOMAIN VPS     ${NC}"
 echo -e "${red}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo "1. Use Domain From Script"
-echo "2. Choose Your Own Domain" 
-echo "3. Use Wildcard Domain with Cloudflare"
+echo "1. Use Domain From Script / Gunakan Domain Dari Script"
+echo "2. Choose Your Own Domain / Pilih Domain Sendiri" 
+echo "3. Wildcard Domain with Cloudflare / Domain Wildcard"
 echo -e "${red}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-read -rp "Choose Your Domain Installation : " dom
-
-if test $dom -eq 1; then
-    # Existing code
-elif test $dom -eq 2; then
-    # Existing code  
-elif test $dom -eq 3; then
-    echo -e "${GREEN}Setting up Wildcard Domain with Cloudflare...${NC}"
-    wget -q -O /root/cf-wildcard.sh "https://${Server_URL}/cf-wildcard.sh"
-    chmod +x /root/cf-wildcard.sh
-    ./cf-wildcard.sh
-else 
-    echo "Not Found Argument"
-    exit 1
-fi
+read -rp "Choose Your Domain Installation : " dom 
 
 if test $dom -eq 1; then
 clear
@@ -101,6 +88,11 @@ chmod +x /root/cf.sh
 elif test $dom -eq 2; then
 read -rp "Enter Your Domain : " domen 
 echo $domen > /root/domain
+elif test $dom -eq 3; then
+# Tambahkan wildcard setup
+wget -q -O /root/wildcard-cf.sh "https://${Server_URL}/cf-wildcard.sh"
+chmod +x /root/wildcard-cf.sh
+./wildcard-cf.sh
 else 
 echo "Not Found Argument"
 exit 1
