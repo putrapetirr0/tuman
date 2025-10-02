@@ -111,14 +111,14 @@ echo "$host" >> /root/domain
 #Install SSH-VPN
 echo -e "\e[0;32mINSTALLING SSH-VPN...\e[0m"
 sleep 1
-wget https://${Server_URL}/ssh-vpn2-w.sh && chmod +x ssh-vpn2.sh && ./ssh-vpn2.sh
+wget https://${Server_URL}/ssh-vpn2.sh && chmod +x ssh-vpn2.sh && ./ssh-vpn2.sh
 sleep 3
 clear
 echo -e "\e[0;32mINSTALLING XRAY CORE...\e[0m"
 sleep 3
 wget -q -O /root/xray2.sh "https://${Server_URL}/xray2.sh"
 chmod +x /root/xray2.sh
-./xray2-w.sh
+./xray2.sh
 echo -e "${GREEN}Done!${NC}"
 sleep 2
 clear
@@ -127,7 +127,7 @@ echo -e "\e[0;32mINSTALLING SET-BR...\e[0m"
 sleep 1
 wget -q -O /root/set-br.sh "https://${Server_URL}/set-br.sh"
 chmod +x /root/set-br.sh
-./set-br-w.sh
+./set-br.sh
 echo -e "${GREEN}Done!${NC}"
 sleep 2
 clear
