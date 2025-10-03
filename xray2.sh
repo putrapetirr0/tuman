@@ -48,8 +48,12 @@ if [ ! -f "/usr/local/etc/xray/xray.crt" ]; then
     if [[ $domain == *"*"* ]]; then
         echo -e "[ ${green}INFO${NC} ] Wildcard domain detected, using existing certificate"
     else
-        /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
-        ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /usr/local/etc/xray/xray.crt --keypath /usr/local/etc/xray/xray.key --ecc
+        /root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
+       	/root/.acme.sh/acme.sh --issue --dns dns_cf -d "$domain" -d "*.$domain" -k ec-256 --force
+
+		~/.acme.sh/acme.sh --installcert -d "$domain" -d "*.$domain" \
+			--fullchainpath /usr/local/etc/xray/xray.crt \
+			--keypath /usr/local/etc/xray/xray.key --ecc
     fi
 else
     echo -e "[ ${green}INFO${NC} ] Using existing SSL certificate"
