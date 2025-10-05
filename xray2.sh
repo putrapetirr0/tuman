@@ -1063,11 +1063,6 @@ END
 
 #nginx config
 cat >/etc/nginx/conf.d/xray.conf <<EOF
-# Di file /etc/nginx/conf.d/xray.conf, ganti server_name menjadi:
-server_name $domain *.$domain;
-
-# Contoh lengkap:
-cat >/etc/nginx/conf.d/xray.conf <<EOF
     server {
              listen 80;
              listen [::]:80;
